@@ -1,0 +1,23 @@
+list_data=list(c("Red","Green","Blue","Black","Orange"),matrix(c(1,2,3,4,5,6),nrow = 2),list("Python","Java","php"))
+names(list_data)=c("Colors","Matrix","List")
+print(list_data)
+print(length(list_data))
+print(length(list_data$Colors))
+#################################################################################
+print(list_data[1])
+print(list_data[3])
+list_data$Colors=list_data$Colors[-3]
+print(list_data)
+####################################################################################
+list_data[4]="r"
+print(list_data)
+list_data[3]="fewd"
+print(list_data)
+list_data[4]=NULL
+print(list_data)
+m1=list(c(2,3,1,4,5,6))
+mlist=c(list_data,m1)
+v1=unlist(mlist[2])
+v2=unlist(mlist[4])
+v=v1+v2
+print(v)
