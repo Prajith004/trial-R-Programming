@@ -1,0 +1,26 @@
+data(mtcars)
+IQR(mtcars$mpg)
+var(mtcars$mpg)
+sd(mtcars$mpg)
+#################################################
+cov(mtcars$mpg,mtcars$wt)
+library(dplyr)
+mtcars%>%select(wt,mpg)%>%cov()
+############################################
+cor(mtcars$mpg,mtcars$cyl)
+########################################################
+i=mtcars[,c("mpg","disp","hp","wt")]
+print(head(i))
+model=lm(mpg~disp+hp+wt,data = i)
+print(model)
+a=coef(model)[1]
+print(a)
+Xdisp=coef(model)[2]
+Xhp=coef(model)[3]
+Xwt=coef(model)[4]
+print(Xdisp)
+print(Xhp)
+print(Xwt)
+mpg_predict=data.frame(disp=221,hp=102,wt=2.91)
+predict=predict(model,mpg_predict)
+print(predict)

@@ -17,3 +17,4 @@ png(file="pie_3d.png")
 pie3D(x,labels = pie_percentage,explode = 0.1,main="city pie percentage",col=rainbow(length(x)))
 legend("topright",c("London","Nyc","Singapore","Mumbai"),cex=1.2,fill = rainbow((length(x))))
 dev.off()
+pie3
